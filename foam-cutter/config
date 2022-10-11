@@ -1,0 +1,134 @@
+# NOTE Lines must not exceed 132 characters
+# Robot module configurations : general handling of movement G-codes and slicing into moves
+default_feed_rate                            150             # Default rate ( mm/minute ) for G1/G2/G3 moves
+default_seek_rate                            300             # Default rate ( mm/minute ) for G0 moves
+mm_per_arc_segment                           0.5              # Arcs are cut into segments ( lines ), this is the length for
+                                                              # these segments.  Smaller values mean more resolution,
+                                                              # higher values mean faster computation
+mm_per_line_segment                          5                # Lines can be cut into segments ( not usefull with cartesian
+                                                              # coordinates robots ).
+
+# Arm solution configuration : Cartesian robot. Translates mm positions into stepper positions
+alpha_steps_per_mm                           1842.6    # Steps per mm for alpha stepper
+beta_steps_per_mm                            400  #1842.6    # Steps per mm for beta stepper
+gamma_steps_per_mm                           1842.6    # Steps per mm for gamma stepper
+delta_steps_per_mm                           400   #1842.6              # Steps per mm for extruder stepper
+
+# Planner module configuration : Look-ahead and acceleration configuration
+# See http://smoothieware.org/motion-control
+acceleration                                 3000             # Acceleration in mm/second/second.
+#z_acceleration                              500              # Acceleration for Z only moves in mm/s^2, 0 uses acceleration which is the default. DO NOT SET ON A DELTA
+junction_deviation                           0.05             # See http://smoothieware.org/motion-control#junction-deviation
+#z_junction_deviation                        0.0              # For Z only moves, -1 uses junction_deviation, zero disables junction_deviation on z moves DO NOT SET ON A DELTA
+
+# Cartesian axis speed limits
+x_axis_max_speed                             30000            # mm/min
+y_axis_max_speed                             30000            # mm/min
+z_axis_max_speed                             30000            # mm/min
+
+# Stepper module configuration 
+# Pins are defined as  ports, and pin numbers, appending "!" to the number will invert a pin
+# See http://smoothieware.org/pin-configuration and http://smoothieware.org/pinout
+alpha_step_pin                               2.0              # Pin for alpha stepper step signal
+alpha_dir_pin                                0.5!              # Pin for alpha stepper direction
+alpha_en_pin                                 0.4              # Pin for alpha enable pin
+alpha_current                                0.5              # X stepper motor current
+alpha_max_rate                               300.0          # mm/min
+
+beta_step_pin                                2.1              # Pin for beta stepper step signal
+beta_dir_pin                                 0.11!             # Pin for beta stepper direction
+beta_en_pin                                  0.10             # Pin for beta enable
+beta_current                                 0.5             # Y stepper motor current
+beta_max_rate                                300.0          # mm/min
+
+gamma_step_pin                               2.2              # Pin for gamma stepper step signal
+gamma_dir_pin                                0.20             # Pin for gamma stepper direction
+gamma_en_pin                                 0.19             # Pin for gamma enable
+gamma_current                                0.6              # Z stepper motor current
+gamma_max_rate                               300.0            # mm/min
+
+# A axis
+delta_step_pin                               2.3     # Pin for delta stepper step signal
+delta_dir_pin                                0.22!    # Pin for delta stepper direction
+delta_en_pin                                 0.21    # Pin for delta enable
+delta_current                                1.5     # Z stepper motor current
+delta_max_rate                               300.0   # mm/min
+delta_acceleration                           500.0   # mm/sec²
+
+
+### Temperature control configuration
+# See http://smoothieware.org/temperaturecontrol
+
+temperature_control.wire.enable            true             # Whether to activate this ( "hotend" ) module at all.
+temperature_control.wire.thermistor_pin    0.23             # Pin for the thermistor to read
+#temperature_control.wire.heater_pin        2.7              # Pin that controls the heater, set to nc if a readonly thermistor is being defined
+temperature_control.wire.thermistor        EPCOS100K        # See http://smoothieware.org/temperaturecontrol#toc5
+#temperature_control.wire.beta             4066             # Or set the beta value
+#temperature_control.wire.set_m_code        104              # M-code to set the temperature for this module
+#temperature_control.wire.set_and_wait_m_code 109            # M-code to set-and-wait for this module
+temperature_control.wire.designator        T                # Designator letter for this module
+temperature_control.wire.max_temp         800              # Set maximum temperature - Will prevent heating above 300 by default
+#temperature_control.wire.min_temp         0                # Set minimum temperature - Will prevent heating below if set
+
+
+# Switch module for spindle control
+switch.spindle.enable                        true            #
+switch.spindle.input_on_command                  M3               #
+switch.spindle.input_off_command                 M5               #
+switch.spindle.output_pin                        2.5              # Here we are using the first big MOSFET
+switch.spindle.output_type                       pwm              # pwm output settable with S parameter in the input_on_comand
+switch.spindle.max_pwm                           255              # set max pwm for the pin default is 255
+
+
+## Switch modules
+# See http://smoothieware.org/switch
+
+
+#switch.misc.enable                          true             # Enable this module
+#switch.misc.input_on_command                M42              # Command that will turn this switch on
+#switch.misc.input_off_command               M43              # Command that will turn this switch off
+#switch.misc.output_pin                      2.4              # Pin this module controls
+#switch.misc.output_type                     digital          # Digital means this is just an on or off pin
+
+## Endstops
+## Endstops new syntax (the name is not significant)
+# NOTE only a min or a max homing endstop maybe defined
+endstop.minx.enable                          true             # enable an endstop
+endstop.minx.pin                             1.24^            # pin
+endstop.minx.homing_direction                home_to_min      # direction it moves to the endstop
+endstop.minx.homing_position                 0                # the cartesian coordinate this is set to when it homes
+endstop.minx.axis                            X                # the axis designator
+endstop.minx.max_travel                      500              # the maximum travel in mm before it times out
+endstop.minx.fast_rate                       5               # fast homing rate in mm/sec
+endstop.minx.slow_rate                       2               # slow homing rate in mm/sec
+endstop.minx.retract                         5                # bounce off endstop in mm
+
+endstop.miny.enable                          true             # enable an endstop
+endstop.miny.pin                             1.26^             # pin
+endstop.miny.homing_direction                home_to_min      # direction it moves to the endstop
+endstop.miny.homing_position                 0                # the cartesian coordinate this is set to when it homes
+endstop.miny.axis                            Y                # the axis designator
+endstop.miny.max_travel                      500              # the maximum travel in mm before it times out
+endstop.miny.fast_rate                       5               # fast homing rate in mm/sec
+endstop.miny.slow_rate                       2               # slow homing rate in mm/sec
+endstop.miny.retract                         5                # bounce off endstop in mm
+
+endstop.minz.enable                          true             # enable an endstop
+endstop.minz.pin                             1.28^             # pin
+endstop.minz.homing_direction                home_to_min      # direction it moves to the endstop
+endstop.minz.homing_position                 0                # the cartesian coordinate this is set to when it homes
+endstop.minz.axis                            Z                # the axis designator
+endstop.minz.max_travel                      500              # the maximum travel in mm before it times out
+endstop.minz.fast_rate                       5               # fast homing rate in mm/sec
+endstop.minz.slow_rate                       2                # slow homing rate in mm/sec
+endstop.minz.retract                         5                # bounce off endstop in mm
+
+endstop.mina.enable                          true             # enable an endstop
+endstop.mina.pin                             1.29             # pin
+endstop.mina.homing_direction                home_to_min      # direction it moves to the endstop
+endstop.mina.homing_position                 0                # the cartesian coordinate this is set to when it homes
+endstop.mina.axis                            A                # the axis designator
+endstop.mina.max_travel                      500              # the maximum travel in mm before it times out
+endstop.mina.fast_rate                       5               # fast homing rate in mm/sec
+endstop.mina.slow_rate                       2                # slow homing rate in mm/sec
+endstop.mina.retract                         5                # bounce off endstop in mm
