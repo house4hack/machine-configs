@@ -41,7 +41,7 @@ alpha_max_rate                               300.0          # mm/min
 beta_step_pin                                2.1              # Pin for beta stepper step signal
 beta_dir_pin                                 0.11!             # Pin for beta stepper direction
 beta_en_pin                                  0.10             # Pin for beta enable
-beta_current                                 0.5             # Y stepper motor current
+beta_current                                 0.3             # Y stepper motor current
 beta_max_rate                                300.0          # mm/min
 
 gamma_step_pin                               2.2              # Pin for gamma stepper step signal
@@ -54,7 +54,7 @@ gamma_max_rate                               300.0            # mm/min
 delta_step_pin                               2.3     # Pin for delta stepper step signal
 delta_dir_pin                                0.22!    # Pin for delta stepper direction
 delta_en_pin                                 0.21    # Pin for delta enable
-delta_current                                0.5     # Z stepper motor current
+delta_current                                0.3     # Z stepper motor current
 delta_max_rate                               300.0   # mm/min
 delta_acceleration                           500.0   # mm/sec²
 
