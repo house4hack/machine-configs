@@ -37,18 +37,28 @@ alpha_dir_pin                                0.5!              # Pin for alpha s
 alpha_en_pin                                 0.4              # Pin for alpha enable pin
 alpha_current                                0.5              # X stepper motor current
 alpha_max_rate                               300.0          # mm/min
+alpha_fast_homing_rate_mm_s                  150
+alpha_slow_homing_rate_mm_s                  50
+ 
 
 beta_step_pin                                2.1              # Pin for beta stepper step signal
 beta_dir_pin                                 0.11!             # Pin for beta stepper direction
 beta_en_pin                                  0.10             # Pin for beta enable
 beta_current                                 0.3             # Y stepper motor current
 beta_max_rate                                300.0          # mm/min
+beta_fast_homing_rate_mm_s                  150
+beta_slow_homing_rate_mm_s                  50
+
 
 gamma_step_pin                               2.2              # Pin for gamma stepper step signal
 gamma_dir_pin                                0.20             # Pin for gamma stepper direction
 gamma_en_pin                                 0.19             # Pin for gamma enable
 gamma_current                                0.6              # Z stepper motor current
 gamma_max_rate                               300.0            # mm/min
+gamma_fast_homing_rate_mm_s                  150
+gamma_slow_homing_rate_mm_s                  50
+
+
 
 # A axis
 delta_step_pin                               2.3     # Pin for delta stepper step signal
@@ -57,6 +67,9 @@ delta_en_pin                                 0.21    # Pin for delta enable
 delta_current                                0.3     # Z stepper motor current
 delta_max_rate                               300.0   # mm/min
 delta_acceleration                           500.0   # mm/sec²
+delta_fast_homing_rate_mm_s                  150
+delta_slow_homing_rate_mm_s                  50
+
 
 
 ### Temperature control configuration
