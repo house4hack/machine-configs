@@ -26,9 +26,6 @@ x_axis_max_speed                             30000            # mm/min
 y_axis_max_speed                             30000            # mm/min
 z_axis_max_speed                             30000            # mm/min
 
-currentcontrol_module_enable 	true
-digipotchip 	mcp4451 	
-
 # Stepper module configuration 
 # Pins are defined as  ports, and pin numbers, appending "!" to the number will invert a pin
 # See http://smoothieware.org/pin-configuration and http://smoothieware.org/pinout
@@ -47,14 +44,14 @@ beta_max_rate                                300.0          # mm/min
 gamma_step_pin                               2.2              # Pin for gamma stepper step signal
 gamma_dir_pin                                0.20             # Pin for gamma stepper direction
 gamma_en_pin                                 0.19             # Pin for gamma enable
-gamma_current                                0.5              # Z stepper motor current
+gamma_current                                0.6              # Z stepper motor current
 gamma_max_rate                               300.0            # mm/min
 
 # A axis
 delta_step_pin                               2.3     # Pin for delta stepper step signal
 delta_dir_pin                                0.22!    # Pin for delta stepper direction
 delta_en_pin                                 0.21    # Pin for delta enable
-delta_current                                0.5     # Z stepper motor current
+delta_current                                0.6     # Z stepper motor current
 delta_max_rate                               300.0   # mm/min
 delta_acceleration                           500.0   # mm/sec²
 
