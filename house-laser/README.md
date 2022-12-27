@@ -33,4 +33,7 @@ Basic steps to use the laser cutter:
 - Now you are ready to use it.
 
 If you have a head crash, the laser bed will need to be levelled again. 
-	
+
+Some Notes:
+* Home position is at X=-4.67 and Y=-7mm.
+* We have a plexiglass square at X=0mm and Y=405mm  
