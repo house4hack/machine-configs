@@ -53,7 +53,7 @@ beta_slow_homing_rate_mm_s                  50
 gamma_step_pin                               2.2              # Pin for gamma stepper step signal
 gamma_dir_pin                                0.20             # Pin for gamma stepper direction
 gamma_en_pin                                 0.19             # Pin for gamma enable
-gamma_current                                0.65              # Z stepper motor current
+gamma_current                                0.75              # Z stepper motor current
 gamma_max_rate                               300.0            # mm/min
 gamma_fast_homing_rate_mm_s                  150
 gamma_slow_homing_rate_mm_s                  50
