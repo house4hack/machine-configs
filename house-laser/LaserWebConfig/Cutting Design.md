@@ -89,7 +89,12 @@ Drag a design file into the Documents area <br/>
 - Laser Runs GCode Path
 
 # WARNING - Do NOT open Laser Lid while operation is still running.
+
+<img src="../images/Braille Laser.png" >
+
+<br/>
 - Ensure Laser Operation has finished before lifting Lid.
+<br/><br/>
 
 ````Hint : If you are not sure the cutting opertion has cut all the way through the material, ensure the material is NOT MOVED when checking, If another pass in needed, simply close the lid and rerun the operation by clicking the Run button again.````
 
