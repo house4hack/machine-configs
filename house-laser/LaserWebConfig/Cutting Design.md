@@ -62,14 +62,17 @@ Drag a design file into the Documents area <br/>
 * [3] Gcode Generation Button
 <br/>
 - Set the Desired Laser Operation Parameters: 
-    - Laser Power ( 
-        *Percentage* )
-    - Cut Rate ( 
-        *mm/min* )
-    - Height ( Height of top surface of material above bed - AKA Thickness *in mm*)
-    - Passes (
-        *number*)
-        <br/><br/>
+
+| Setting       | Description   | Type  |
+| ------------- |:-------------:| -----:|
+| Laser Power     | Strength of Laser | Percentage % |
+| Cut Rate    | Speed of Laser  |   mm/min |
+| Height | Thickness of Material being cut      |    mm |
+| Passes | Number of passes to perform | number > 0|
+
+
+<br/>
+
 - Click on Generate Button [3] above
 - GCode Generation Process will Run, check Process outputs in Terminal Area ( 
     *Bottom Right*) for errors.
