@@ -9,11 +9,12 @@
 - Select the Files Tab in LaserWeb (top left tab)
 <br/>
 
-    -<img src="../images/Files%20Tab.png" width="300px">
-<br/>
+ <img src="../images/Files%20Tab.png" width="300px">
+ <br/>
 <br/>
 
-    Drag a design file into the Documents area <br/>**OR**
+Drag a design file into the Documents area <br/>
+    **OR**
 <br/>Click on "Add Document" and select file using the dialog.
 
 <br/>
