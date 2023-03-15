@@ -67,9 +67,9 @@ Drag a design file into the Documents area <br/>
     - Cut Rate ( 
         *mm/min* )
     - Height ( Height of top surface of material above bed - AKA Thickness *in mm*)
-
-    -Passes (
+    - Passes (
         *number*)
+        <br/><br/>
 - Click on Generate Button [3] above
 - GCode Generation Process will Run, check Process outputs in Terminal Area ( 
     *Bottom Right*) for errors.
