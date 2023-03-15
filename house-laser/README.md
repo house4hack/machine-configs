@@ -2,6 +2,9 @@
 # **HOUSE-LASER** 
 
 
+[Link to Loading & Cutting using LaserWeb (after seps below)](../house-laser/LaserWebConfig/Cutting%20Design.md)
+
+
 <br/>
 
 Power limited to +/- 80W. thus a 100% setting will be about 80W laser power.
@@ -75,6 +78,10 @@ If you have a head crash, the laser bed will need to be levelled again.
 
 ---
 <br/>
+
+
+[NEXT - Link to Loading & Cutting using LaserWeb](../house-laser/LaserWebConfig/Cutting%20Design.md)
+
 
 **Some Notes:**
 ---------------------------
