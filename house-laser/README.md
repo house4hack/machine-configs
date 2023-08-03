@@ -17,12 +17,15 @@ Cutting Speed/Power settings:
 * 3mm Plexi: 60% @ 800mm/min
 * 5mm Plexi: 60% @ 600mm/min
 * 8mm Wood: 80% @ high speed
-* 6mm MDF : 80% @ 600mm @ 3 passes
+* 6mm MDF : 80% @ 600mm @ 2 passes
 * 1mm Carboard : 60% @ 2000mm/min
 * 0.3mm Mylar 20% @ 1500mm/min ( reduce Air Pressure on Regulator to below +-.5bar : normal setting 1.5bar)
+* 0.3mm Film dressing 20% @ 2000mm/min (reduced pair pressure +-.5bar) 
+
 
 Etching Speed/Power:
 * 12-20% @ 2000mm/min
+  * https://imgur.com/VFWctJ9 sample etchings of 1x1cm tokens , 3mm plexiglass. 10,12,14,16,20,30,40,50% , 2000mm/min
 
 <br/>
 <br/>
