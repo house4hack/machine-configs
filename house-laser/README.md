@@ -16,7 +16,8 @@ Focussing:
 Cutting Speed/Power settings:
 * 3mm Plexi: 60% @ 800mm/min
 * 5mm Plexi: 60% @ 600mm/min
-* 8mm Wood: 80% @ high speed
+* 8mm Wood: 80% @ high speed 
+* 3mm MDF : 80% @ 800mm @ 1 pass
 * 6mm MDF : 80% @ 600mm @ 2 passes
 * 1mm Carboard : 60% @ 2000mm/min
 * 0.3mm Mylar 20% @ 1500mm/min ( reduce Air Pressure on Regulator to below +-.5bar : normal setting 1.5bar)
