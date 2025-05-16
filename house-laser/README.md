@@ -94,4 +94,5 @@ If you have a head crash, the laser bed will need to be levelled again.
 * Home position is at X=-4.67 and Y=-7mm.
 * We have a plexiglass square at X=0mm and Y=405mm
 * The BOTTOM RIGHT of the Laser Bed is TOP LEFT on the Laser Web View.  (Rotated 180)
+* Bed size is 400x600mm
 
