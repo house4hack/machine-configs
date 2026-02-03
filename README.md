@@ -9,3 +9,9 @@ Smoothieware config for 4-axis foam-cutter
   * QCadCamProfiles: Profile settingsfor QCadCam
   * calibration: GCode for our calibration domino. 
   * rpi-image: ToDo - We need to save an image of the SD card
+
+* robobeast 3d printer
+  * Smoothieware config for robobeast 3d printer
+  * CuraProfiles: Cura profiles for robobeast
+  * calibration: GCode for our calibration cube
+  
