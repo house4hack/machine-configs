@@ -28,6 +28,8 @@ Etching Speed/Power:
 * 12-20% @ 2000mm/min
   * https://imgur.com/VFWctJ9 sample etchings of 1x1cm tokens , 3mm plexiglass. 10,12,14,16,20,30,40,50% , 2000mm/min
 
+	* 3mm MDF : 0.1mm line thickness, 3000mm/min 
+
 <br/>
 <br/>
 
